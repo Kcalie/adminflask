@@ -1,16 +1,51 @@
 function toggleImages() {
     var imagesDiv = document.getElementById("images");
     var utilisateursDiv = document.getElementById("utilisateurs");
+    var administrateursDiv = document.getElementById("administrateurs");
 
     imagesDiv.style.display = "block";
     utilisateursDiv.style.display = "none";
+    administrateursDiv.style.display = "none";
+
+    // Enregistrer l'état de l'affichage dans le stockage local
+    localStorage.setItem("currentPage", "images");
 }
 
 function toggleUsers() {
     var imagesDiv = document.getElementById("images");
     var utilisateursDiv = document.getElementById("utilisateurs");
+    var administrateursDiv = document.getElementById("administrateurs");
 
     imagesDiv.style.display = "none";
     utilisateursDiv.style.display = "block";
+    administrateursDiv.style.display = "none";
+
+    // Enregistrer l'état de l'affichage dans le stockage local
+    localStorage.setItem("currentPage", "utilisateurs");
 }
 
+function toggleAdministrateurs() {
+    var imagesDiv = document.getElementById("images");
+    var utilisateursDiv = document.getElementById("utilisateurs");
+    var administrateursDiv = document.getElementById("administrateurs");
+
+    imagesDiv.style.display = "none";
+    utilisateursDiv.style.display = "none";
+    administrateursDiv.style.display = "block";
+
+    // Enregistrer l'état de l'affichage dans le stockage local
+    localStorage.setItem("currentPage", "administrateurs");
+}
+
+// Au chargement de la page, restaurer l'état de l'affichage en fonction de la valeur enregistrée dans le stockage local
+window.onload = function() {
+    var currentPage = localStorage.getItem("currentPage");
+
+    if (currentPage === "images") {
+        toggleImages();
+    } else if (currentPage === "utilisateurs") {
+        toggleUsers();
+    } else if (currentPage === "administrateurs") {
+        toggleAdministrateurs();
+    }
+};
