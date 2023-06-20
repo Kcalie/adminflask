@@ -14,3 +14,22 @@ function toggleUsers() {
     utilisateursDiv.style.display = "block";
 }
 
+// Carrousel
+var carousel = document.querySelector('.carousel');
+var slideWidth = carousel.offsetWidth / 8; // Largeur de chaque diapositive
+
+carousel.addEventListener('scroll', function() {
+    var currentPosition = Math.round(carousel.scrollLeft / slideWidth);
+    carousel.scrollLeft = currentPosition * slideWidth;
+});
+
+
+
+
+
+
+
+
+
+
+
