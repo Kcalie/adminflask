@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Site administrateur</title>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <script src="https://kit.fontawesome.com/22d6814c5f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+        <header>
+            <div class="logo">
+                <img src="image/logo_header.png" alt="Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher...">
+            </div>
+            <div class="login-button">
+                <button>Déconnexion</button>
+            </div>
+        </header>  
+        <div class="sidebar">
+            <img src="image/23.png" alt="Logo">
+            <ul>
+                <li><a href="#" onclick="toggleImages()"><i class="fa-regular fa-image"></i> Images</a></li><br>
+                <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Statistiques</a></li><br>
+                <li><a href="#"><i class="fa-regular fa-share-from-square"></i> Partage</a></li><br>
+                <li><a href="#" onclick="toggleUsers()"><i class="fa-solid fa-users"></i> Utilisateurs</a></li><br>
+                <li><a href="#"><i class="fa-solid fa-gears"></i> Paramètres</a></li>
+            </ul>
+        </div>
+    <!--Menu Images-->
+    <div id="images" class="image">
+            <div class="titre">
+                <h2>Galerie d'images</h2>
+            </div>
+            <div class="main-content">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="image" accept="image/*" required>
+                    <input type="submit" value="Télécharger">
+                </form>
+                <div class="image-container">
+                    <img src="{{ image }}" alt="Image">
+                </div>
+            </div>
+            <div class="amd">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Pseudo</th>
+                            <th>Titre</th>
+                            <th>Date</th>
+                            <th>Heure</th>
+                            <th>Lieu</th>
+                            <th>Commentaire</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="image/1.jpg" alt="eunji01"></td>
+                            <td>Eunji</td>
+                            <td>Jolie</td>
+                            <td>23.06.2023</td>
+                            <td>20h42</td>
+                            <td>Bourges</td>
+                            <td>Woah!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                    <button class="btnP center-button">Partager</button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td><img src="image/2.jpg" alt="eunji02"></td>
+                            <td>Eunji</td>
+                            <td>Jolie</td>
+                            <td>23.06.2023</td>
+                            <td>20h42</td>
+                            <td>Bourges</td>
+                            <td>Woah!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                    <button class="btnP center-button">Partager</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="image/3.jpg" alt="eunji03"></td>
+                            <td>Eunji</td>
+                            <td>Jolie</td>
+                            <td>23.06.2023</td>
+                            <td>20h42</td>
+                            <td>Bourges</td>
+                            <td>Woah!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                    <button class="btnP center-button">Partager</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="image/4.jpg" alt="eunji04"></td>
+                            <td>Eunji</td>
+                            <td>Jolie</td>
+                            <td>23.06.2023</td>
+                            <td>20h42</td>
+                            <td>Bourges</td>
+                            <td>Woah!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                    <button class="btnP center-button">Partager</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="image/5.jpg" alt="eunji05"></td>
+                            <td>Eunji</td>
+                            <td>Jolie</td>
+                            <td>23.06.2023</td>
+                            <td>20h42</td>
+                            <td>Bourges</td>
+                            <td>Woah!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                    <button class="btnP center-button">Partager</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="image/6.jpg" alt="eunji06"></td>
+                            <td>Eunji</td>
+                            <td>Jolie</td>
+                            <td>23.06.2023</td>
+                            <td>20h42</td>
+                            <td>Bourges</td>
+                            <td>Woah!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                    <button class="btnP center-button">Partager</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+        <!-- pseudo, titre, Date, heure, commentaire, hashtags, lieu de la prise de photo, like -->
+    </div>
+    <!--Fin Menu Images-->
+
+
+    <!--Utilisateurs-->
+        <div id="utilisateurs" class="utilisateurs">
+            <div class="titre">
+                <h2>Utilisateurs</h2>
+            </div>
+            <div class="amd">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Prenom</th>
+                            <th>Nom</th>
+                            <th>Pseudo</th>
+                            <th>Adresse email</th>
+                            <th>Mot de passe</th>
+                            <th>Actions</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Eunji</td>
+                            <td>Pyoapple</td>
+                            <td>Pyo</td>
+                            <td>eunji@gmail.com</td>
+                            <td>@654dfv:6f4dv!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Eunji</td>
+                            <td>Pyoapple</td>
+                            <td>Pyo</td>
+                            <td>eunji@gmail.com</td>
+                            <td>@654dfv:6f4dv!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Eunji</td>
+                            <td>Pyoapple</td>
+                            <td>Pyo</td>
+                            <td>eunji@gmail.com</td>
+                            <td>@654dfv:6f4dv!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Eunji</td>
+                            <td>Pyoapple</td>
+                            <td>Pyo</td>
+                            <td>eunji@gmail.com</td>
+                            <td>@654dfv:6f4dv!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Eunji</td>
+                            <td>Pyoapple</td>
+                            <td>Pyo</td>
+                            <td>eunji@gmail.com</td>
+                            <td>@654dfv:6f4dv!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Eunji</td>
+                            <td>Pyoapple</td>
+                            <td>Pyo</td>
+                            <td>eunji@gmail.com</td>
+                            <td>@654dfv:6f4dv!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
