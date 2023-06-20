@@ -23,9 +23,8 @@
             <ul>
                 <li><a href="#" onclick="toggleImages()"><i class="fa-regular fa-image"></i> Images</a></li><br>
                 <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Statistiques</a></li><br>
-                <li><a href="#"><i class="fa-regular fa-share-from-square"></i> Partage</a></li><br>
                 <li><a href="#" onclick="toggleUsers()"><i class="fa-solid fa-users"></i> Utilisateurs</a></li><br>
-                <li><a href="#"><i class="fa-solid fa-gears"></i> Paramètres</a></li>
+                <li><a href="#" onclick="toggleAdministrateurs()"><i class="fa-solid fa-gears"></i>Administrateurs</a></li>
             </ul>
         </div>
     <!--Menu Images-->
@@ -38,9 +37,7 @@
                     <input type="file" name="image" accept="image/*" required>
                     <input type="submit" value="Télécharger">
                 </form>
-                <div class="image-container">
-                    <img src="{{ image }}" alt="Image">
-                </div>
+
             </div>
             <div class="amd">
                 <table>
@@ -257,6 +254,56 @@
                             </td>
                         </tr>
 
+                        <tr>
+                            <td>Eunji</td>
+                            <td>Pyoapple</td>
+                            <td>Pyo</td>
+                            <td>eunji@gmail.com</td>
+                            <td>@654dfv:6f4dv!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    <!--administrateur-->
+        <div id="administrateurs" class="administrateurs">
+            <div class="titre">
+                <h2>Administrateurs</h2>
+            </div>
+            <div class="amd">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Prenom</th>
+                            <th>Nom</th>
+                            <th>Pseudo</th>
+                            <th>Adresse email</th>
+                            <th>Mot de passe</th>
+                            <th>Actions</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Eunji</td>
+                            <td>Pyoapple</td>
+                            <td>Pyo</td>
+                            <td>eunji@gmail.com</td>
+                            <td>@654dfv:6f4dv!</td>
+                            <td>
+                                <div class="boutton">
+                                    <button class="btnM center-button">Modifier</button>
+                                    <button class="btnS center-button">Supprimer</button>
+                                </div>
+                            </td>
+                        </tr>
+                        
                         <tr>
                             <td>Eunji</td>
                             <td>Pyoapple</td>
